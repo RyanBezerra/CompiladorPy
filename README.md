@@ -30,26 +30,37 @@ O projeto é parte de um compilador em desenvolvimento incremental e **possui pe
 
 ## Requisitos  
 
-- **Java 11+** (recomendado: OpenJDK 17 ou superior)  
+- **Java 11+** (para a versão Java)  
+- **Python 3.10+** (para a versão Python do analisador léxico)  
 - IDE ou editor de texto de sua preferência (IntelliJ, VS Code, Eclipse, etc.)  
 
 ---
 
-## Compilação e Execução  
+## Execução  
 
+### Java  
 Dentro da pasta `src`, compile os arquivos:  
 
 ```
-javac mini_compiler/Main.java
+javac -d out --module-path out $(find src -name "*.java")
 ```
 
 E execute o programa:
 
 ```
-java mini_compiler.Main
+java -cp out mini_compiler.Main
 ```
 
-O arquivo de entrada pode ser configurado dentro da classe Main.java ou passado como argumento (dependendo da sua implementação).
+O arquivo de entrada pode ser configurado dentro da classe `Main.java`.
+
+### Python  
+Executar o analisador léxico em Python com o arquivo de entrada (`programa.mc`):
+
+```
+python -m py_lexer.main programa.mc
+```
+
+Saída: uma linha por token contendo tipo, lexema, linha e coluna de início.
 
 
 ## Exemplos de Uso
@@ -67,12 +78,13 @@ if (x >= y) {
 
 ## Saída esperada (tokens):
 
+Para a versão Python, exemplos de tokens impressos:
+
 ```
-[INT, IDENT(x), ASSIGN, NUMBER(10), SEMICOLON]
-[FLOAT, IDENT(y), ASSIGN, NUMBER(3.14), SEMICOLON]
-[IF, LPAREN, IDENT(x), GTE, IDENT(y), RPAREN, LBRACE]
-[PRINT, LPAREN, IDENT(x), RPAREN, SEMICOLON]
-[RBRACE]
+Token(type=INT, lexeme='int', line=1, column=1)
+Token(type=IDENTIFIER, lexeme='x', line=1, column=5)
+Token(type=ASSIGN, lexeme='=', line=1, column=7)
+Token(type=NUMBER, lexeme='10', line=1, column=9)
 ```
 ## Contribuição
 

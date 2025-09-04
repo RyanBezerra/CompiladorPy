@@ -1,0 +1,12 @@
+# Build/output
+out/
+
+# Python
+__pycache__/
+*.pyc
+
+# Editors/IDE
+.idea/
+.vscode/
+
+
