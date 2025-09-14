@@ -11,7 +11,10 @@ O projeto é parte de um compilador em desenvolvimento incremental e **possui pe
 - 📊 **Estatísticas detalhadas** dos tokens encontrados
 - 🚀 **Execução simplificada** com scripts automáticos
 - 🔍 **Detecção automática** do arquivo `programa.mc`
-- 📈 **Gráficos de barras** para visualização dos dados  
+- 📈 **Gráficos de barras** para visualização dos dados
+- 💬 **Modo interativo** para digitar código diretamente no terminal
+- 🎯 **Teste em tempo real** com entrada do usuário
+- 📚 **Sistema de ajuda** com exemplos de sintaxe  
 
 ---
 
@@ -89,6 +92,45 @@ python -m py_lexer.main
 ```bash
 python -m py_lexer.main meu_arquivo.mc
 ```
+
+#### **Modo interativo (NOVO!):**
+```bash
+python -m py_lexer.main -i
+# ou
+python -m py_lexer.main --interativo
+```
+
+### 🎯 **Modo Interativo - Teste em Tempo Real**
+
+O analisador agora suporta **entrada interativa**! Você pode:
+
+- 💬 **Digitar código diretamente** no terminal
+- 📋 **Colar trechos de código** para análise
+- 🔄 **Testar múltiplos códigos** em sequência
+- 📚 **Ver exemplos de sintaxe** com o comando `AJUDA`
+- ⚡ **Análise instantânea** sem criar arquivos
+
+#### **Como usar o modo interativo:**
+
+1. **Execute o comando:**
+   ```bash
+   python -m py_lexer.main -i
+   ```
+
+2. **Digite seu código:**
+   ```
+   >>> int x = 10
+   >>> float y = 3.14
+   >>> if (x > 5) print(x)
+   >>> 
+   ```
+
+3. **Veja a análise instantânea** com tokens coloridos e estatísticas
+
+4. **Comandos especiais:**
+   - `AJUDA` - Mostra exemplos de sintaxe
+   - `SAIR` - Encerra o programa
+   - `Ctrl+C` - Sai a qualquer momento
 
 ### ☕ **Método 3: Java (Opcional)**
 
@@ -192,6 +234,9 @@ Total: 26 tokens encontrados
 - ✅ **Estatísticas detalhadas** com gráficos
 - ✅ **Scripts de execução automática** para Windows e Linux/Mac
 - ✅ **Detecção automática** do arquivo de entrada
+- ✅ **Modo interativo** para entrada de código em tempo real
+- ✅ **Sistema de ajuda** com exemplos de sintaxe
+- ✅ **Teste múltiplo** de códigos em sequência
 
 ## 📚 **Contribuição**
 

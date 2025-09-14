@@ -15,6 +15,17 @@ class Scanner:
         self.index: int = 0
         self.line: int = 1
         self.column: int = 1
+    
+    @classmethod
+    def from_string(cls, source_code: str) -> 'Scanner':
+        """Cria um Scanner a partir de uma string de código"""
+        scanner = cls.__new__(cls)
+        scanner.source = source_code
+        scanner.length = len(source_code)
+        scanner.index = 0
+        scanner.line = 1
+        scanner.column = 1
+        return scanner
 
     def __iter__(self) -> Iterator[Token]:
         while True:
