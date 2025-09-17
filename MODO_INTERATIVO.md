@@ -15,8 +15,6 @@ python -m py_lexer.main -i
 # Opção 2: Comando longo
 python -m py_lexer.main --interativo
 
-# Opção 3: Comando em português
-python -m py_lexer.main --interativo
 ```
 
 ### 2. **Interface do Modo Interativo**
