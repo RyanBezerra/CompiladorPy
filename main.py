@@ -3,10 +3,13 @@ Compilador - Analisador Léxico e Sintático
 Checkpoint 01: Analisador Léxico
 Checkpoint 02: Analisador Sintático
 
-Disciplina: Construção de Compiladores I
+Disciplina: Projeto de Linguagens de Programação
 
 Integrantes do Grupo:
-- [Adicione os nomes dos integrantes aqui]
+- Matheus Farias
+- Ryan Nascimento
+- Luiz Fernando
+- Otávio Fernando
 """
 # Importa recursos para usar anotações de tipo mais modernas
 from __future__ import annotations
